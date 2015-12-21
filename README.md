@@ -1,4 +1,4 @@
-# Responsive v.1.0.0
+# Scrollto v.1.0.0
 
 jQuery helper plugin, scrolls page to destination container.
 
@@ -20,7 +20,7 @@ if ($.fn.scrolltoSetup) {
 		animationSpeed: 2000,
 		additionalHeight: 100
 	});
-} 
+}
 ```
 
 Copyright 2015 Michał Pacek

@@ -8,15 +8,18 @@ $.fn.scrolltoSetup = function (settings) {
       additionalHeight: 0
   }, settings);
 
-  var $scrollButton = $(this),
-      scrollDestination = $scrollButton.attr('href');
+  return this.each(function () {
 
-  $scrollButton.on('click.scrollto', function (e) {
-    e.preventDefault();
+    var $scrollButton = $(this),
+        scrollDestination = $scrollButton.attr('href');
 
-    $('html, body').animate({
-        scrollTop: $(scrollDestination).offset().top - settings.additionalHeight
-    }, settings.animationSpeed);
+    $scrollButton.on('click.scrollto', function (e) {
+      e.preventDefault();
+
+      $('html, body').animate({
+          scrollTop: $(scrollDestination).offset().top - settings.additionalHeight
+      }, settings.animationSpeed);
+    });
   });
 }
 
